@@ -1,0 +1,19 @@
+/// Diseña un programa que guarde una vocal secreta en una variable, debemos pedirle al usuario
+/// que intente adivinar la vocal secreta, e intentará tantas veces como sea necesario hasta que la
+/// adivine.
+
+Algoritmo vocal_secreta
+	
+	Definir letra, vocalSecreta Como Caracter
+	vocalSecreta = Minusculas("i");
+	Escribir "Ingrese una letra vocal para adivinar la vocal secreta:";
+	Leer letra;
+	
+	Mientras letra <> vocalSecreta Hacer
+	Escribir "No acertaste la vocal secreta, ingrese otra letra:";
+	Leer letra;
+FinMientras
+
+	Escribir "Adivinaste la vocal secreta: " , letra , " !!!";
+	
+FinAlgoritmo
