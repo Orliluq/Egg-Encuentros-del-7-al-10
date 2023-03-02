@@ -1,0 +1,28 @@
+/// Realizar un programa que muestre la cantidad de números que son múltiplos de 2 o de 3
+/// comprendidos entre 1 y 100.
+
+Algoritmo multiplos_de_2_y_3
+	
+	Definir x, a, b Como Entero;
+	
+	x = 1;
+	a = 0;
+	b = 0;
+	
+	Mientras x <= 100 Hacer
+		Si x MOD 2 == 0 Entonces;
+			Escribir x;
+				a = a + 1;
+		SiNo                    
+			Si x MOD 3 == 0 Entonces;
+				Escribir x;
+				b = b + 1;
+			FinSi
+		FinSi
+		x = x + 1;
+	FinMientras
+	
+	Escribir " Los números múltiplos de 2: " , a;
+	Escribir " Los números múltiplos de 3: " , b;    
+	
+FinAlgoritmo
