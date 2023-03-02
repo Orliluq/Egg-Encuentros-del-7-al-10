@@ -1,0 +1,42 @@
+/// Escribir un programa que lea números enteros hasta teclear 0 (cero). Al finalizar el
+/// programa se debe mostrar el máximo número ingresado, el mínimo, y el promedio de
+/// todos ellos.
+/// Para poder lograr, por ejemplo, el máximo inicializaremos una variable en cero llamada
+/// numeroMaximo. Luego iremos comparando cada número que se ingresa con esta variable. Si es
+/// mayor reemplazaremos el valor de numeroMaximo. Por ejemplo si 5>0 entonces el máximo entre
+/// estos números será 5. Si luego ingreso el número 2, se evalúa 2>5 lo que resultará falso y por lo
+/// tanto el valor 5 de numeroMaximo no se reemplaza. Una lógica similar tendrá el número menor.
+
+Algoritmo numeroMaximo
+	
+	Definir contador, numMaximo, numMinimo Como Entero
+	Definir num, suma Como Real
+	
+	Escribir "Ingrese un número entero:"
+	Leer num
+	
+	suma=0
+	contador=1
+	numMaximo=0
+	numMinimo=-0
+	
+	Repetir
+		suma=suma+num
+		contador=contador+1
+		Escribir "Ingrese un número: ";
+		Leer num;
+		
+		Si (num<numMinimo) Entonces
+			numMinimo=num;
+		FinSi
+		
+		Si (num>numMaximo) Entonces
+			numMaximo=num
+		FinSi
+		
+	Hasta Que num = -0
+	Escribir "El promedio es: "  , suma/(contador-1)
+	Escribir "El número máximo es: "  , numMaximo
+	Escribir "El número mínimo es: "  , numMinimo
+	
+FinAlgoritmo
