@@ -1,0 +1,32 @@
+/// 3o) Si x no es el número exacto, el programa indica si n es más grande o más pequeño
+/// que el número ingresado.
+/// 4o) Repetimos desde 2) hasta que x sea igual a n.
+/// El programa tiene que imprimir los mensajes adecuados para informarle al usuario qué
+/// hacer y qué pasó hasta que adivine el número.
+/// NOTA: Para generar un número aleatorio entre 1 y 10 se puede utilizar la función
+/// Aleatorio(limite_inferior, limite_superior) de PseInt.
+
+Algoritmo juego_adivinanza8
+	
+	Definir num, limiteSuperior, aleat Como Entero
+	Definir estado Como Logico
+	
+	limiteSuperior = 10
+	estado = falso
+	
+	Hacer
+		Escribir "Ingrese un número menor o igual a 10: "
+		Leer num
+		aleat = azar(limiteSuperior) + 1
+		Si num <> aleat Entonces
+			Si num > aleat Entonces
+				Escribir "El número es mayor al aleatorio."
+			SiNo
+				Escribir "El número es menor al aleatorio"
+			FinSi
+		SiNo
+			Escribir "Felicidades!!! Adivinaste el número."
+			estado = Verdadero
+		FinSi
+	Mientras Que !estado
+FinAlgoritmo
