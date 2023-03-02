@@ -1,0 +1,26 @@
+EJERCICIO VOCAL SECRETA - PARTE 2
+/// Vamos a hacer nuevamente el ejercicio de la vocal misteriosa, pero esta vez con una estructura
+/// Hacer-Mientras. ¿Puedes notar cuál es la diferencia entre ambas estructuras?
+
+Algoritmo vocalSecreta
+		
+	Definir letra, vocalSec Como Caracter
+	Definir estado Como Logico
+	
+	vocalSec =();
+	Escribir "Ingrese una letra vocal para adivinar la vocal secreta:";
+	Leer letra;
+	
+	Hacer
+		Si letra <> vocalSec
+			estado=Falso
+			Escribir "No acertaste la vocal secreta, ingrese otra letra:";
+			Leer letra;
+		SiNo
+			letra = vocalSec
+			estado=Verdadero
+		FinSi	
+	Mientras Que estado
+	
+	Escribir "Adivinaste la vocal secreta: " , letra , " !!!";
+FinAlgoritmo
