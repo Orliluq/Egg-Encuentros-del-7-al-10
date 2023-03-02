@@ -1,0 +1,27 @@
+/// Realizar un programa que solicite al usuario su código de usuario (un número entero
+/// mayor que cero) y su contraseña numérica (otro número entero positivo). El programa no
+/// le debe permitir continuar hasta que introduzca como código 1024 y como contraseña
+/// 4567. El programa finaliza cuando ingresa los datos correctos.
+
+Algoritmo usuario_contrasena
+	
+	Definir i, codigo, password Como Entero
+	
+	i = 1
+	
+	Mientras i <> 0 Hacer
+		Escribir "Ingrese su código de usuario: ";
+		Leer codigo;
+		Escribir "Ingrese su contraseña: ";
+		Leer password;
+			
+		Si codigo == 1024 Y password == 4567 Entonces;
+			i = 0;
+			Escribir "Los datos son correctos. Puede ingresar al sistema.";
+		SiNo
+			Escribir "Los datos son incorrectos.";
+			Escribir "Inténtelo nuevamente.";
+		FinSi
+	FinMientras
+	
+FinAlgoritmo
