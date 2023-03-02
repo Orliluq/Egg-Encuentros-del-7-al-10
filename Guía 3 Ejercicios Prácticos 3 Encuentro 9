@@ -1,0 +1,53 @@
+/// Un docente de Programación tiene un listado de 3 notas registradas por cada uno de sus
+/// N estudiantes. La nota final se compone de un trabajo práctico Integrador (35%), una
+/// Exposición (25%) y un Parcial (40%). El docente requiere los siguientes informes claves
+/// de sus estudiantes:
+/// * Nota promedio final de los estudiantes que reprobaron el curso. Un estudiante
+/// reprueba el curso si tiene una nota final inferior a 6.5
+/// * Porcentaje de alumnos que tienen una nota de integrador mayor a 7.5.
+/// * La mayor nota obtenida en las exposiciones.
+/// * Total de estudiantes que obtuvieron en el Parcial entre 4.0 y 7.5.
+/// El programa pedirá la cantidad de alumnos que tiene el docente y en cada alumno pedirá
+/// las 3 notas y calculará todos informes claves que requiere el docente.
+
+Algoritmo docente_programacion
+	
+	Definir nota1, nota2, nota3, notaMax, n, nf, i, porcentaje, cont, cont2 Como Real;
+	Escribir "Ingrese número de alumnos:";
+	Leer n;
+	
+	Para i=1 Hasta n Con Paso 1 Hacer;
+		Escribir "Ingrese las notas del ", i "º alumno";
+		Leer nota1,nota2,nota3;
+		nf = -(0.35*nota1)+(0.25*nota2)+(0.40*nota3);
+		
+		Si nf < 6.5 Entonces;
+			Escribir "La nota del promedio final de los estudiantes que reprobaron es " , nf;
+		FinSi
+		
+		cont=0;
+		Si nf > 7.5 Entonces;
+			cont=cont+1;
+			porcentaje = cont*100/n;
+			Escribir "El porcentaje de alumnos con nota integrador mayor a 7.5 es " , porcentaje "%";
+		FinSi
+		
+		notaMax=0;
+		Si notaMax < nota2 Entonces;
+			notaMax = nota2;
+			Escribir "La nota de integrador Mayor es: " ,notaMax;
+		FinSi
+		
+		cont=notaMax+nota3
+		Si notaMax = 7.5 Y nota3 = 4.0 Entonces;
+			Escribir "Total de estudiantes que obtuvieron en el Parcial entre 4.0 y 7.5 es: " , cont;
+		FinSi
+		
+		cont2=0;
+		Si nota3>= 4 Y nota3 <= 7.5 Entonces;
+			cont2=cont2+1;
+			Escribir "El número de informes que requiere el docente es ", cont2;
+		FinSi
+	FinPara
+	
+FinAlgoritmo
